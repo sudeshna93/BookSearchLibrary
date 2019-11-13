@@ -27,12 +27,10 @@ class BookSearchViewController: UIViewController {
     }
     
     @IBOutlet weak var bookSearchBar: UISearchBar!
-    var controller : BookModelViewProtocol = BookModelView()
+    var vm: BookModelViewProtocol!
     var arr: [String] = []
     private var previousRun = Date()
     private let minInterval = 0.05
-    
-    
     
     //MARK: View life-cycle
     override func viewDidLoad() {
@@ -49,7 +47,7 @@ class BookSearchViewController: UIViewController {
 
 extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return controller.books.count
+        return vm.books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,6 +56,7 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
         let row = indexPath.row
         setupImage(for: cell, at: row)
         setupName(for: cell, at: row)
+        cell.register(self, id: row)
         return cell
         
     }
@@ -65,11 +64,11 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func setupImage(for cell: BookSearchCollectionViewCell, at row: Int){
         //cancel a previous enqueued task if any
-        let book = controller.books[row]
+        let book = vm.books[row]
         if let prevTaskIndex = cell.prevTag,
             let urlString = book.volumeInfo.imageLinks.thumbnail {
             if let oldURL = URL(string: urlString){
-                controller.cancelTask(oldURL)
+                vm.cancelTask(oldURL)
             }
         }
         
@@ -78,7 +77,7 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
         if let image = book.volumeInfo.imageLinks.thumbnail,
             let url = URL(string: image){
             cell.prevTag = row
-            controller.getPicture(url) { (data) in
+            vm.getPicture(url) { (data) in
                 guard let data = data else {
                     return
                 }
@@ -94,7 +93,7 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
     
     
     func setupName(for cell: BookSearchCollectionViewCell , at row: Int){
-        if let title = controller.books[row].volumeInfo.title {
+        if let title = vm.books[row].volumeInfo.title {
             arr.append(title)
             cell.titleLabel.text = title
         }
@@ -118,7 +117,7 @@ extension BookSearchViewController: UISearchBarDelegate{
         if Date().timeIntervalSince(previousRun) > minInterval {
             previousRun = Date()
 
-            controller.download(search: textToSearch) { _ in
+            vm.download(search: textToSearch) { _ in
                 DispatchQueue.main.async {
                     self.collectionview.reloadData()
                 }
@@ -131,7 +130,7 @@ extension BookSearchViewController: UISearchBarDelegate{
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        
-        controller.download(search: "") { _ in
+        vm.download(search: "") { _ in
             DispatchQueue.main.async {
                 self.collectionview.reloadData()
             }
@@ -177,4 +176,31 @@ extension BookSearchViewController: UICollectionViewDelegateFlowLayout {
         return 4.0
     }
 
+}
+
+extension BookSearchViewController: BookSearchCellTapDelegate {
+    func didDoubleTap(id: Int) {
+        if vm.favourite(at: id) {
+            showToast(text: "User did favourite a book!")
+        }
+        else {
+            showToast(text: "You already have this book favorited!")
+        }
+    }
+}
+
+extension BookSearchViewController {
+    func showToast(text: String) {
+        let alert = UIAlertController(title: text,
+                                      message: nil,
+                                      preferredStyle: .alert)
+        present(alert, animated: true) {
+            UIView.animate(withDuration: 1.0, animations: {
+                    alert.view.alpha = 0.0
+            }) { (finished) in
+                if finished { alert.dismiss(animated: true) }
+            }
+        }
+    }
+    
 }

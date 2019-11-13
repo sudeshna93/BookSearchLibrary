@@ -12,13 +12,27 @@ import FanMenu
 class FavouriteViewController: UIViewController {
 
     @IBOutlet weak var fanMenuView: FanMenu!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var vm: FavouritedBooksViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setButton()
-
+        setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self,
+                           forCellReuseIdentifier: "reuseID")
+        tableView.register(FavouriteBookTableViewCell.self, forCellReuseIdentifier: "fancyCell")
+    }
 
     func setButton(){
         fanMenuView.button = FanMenuButton(
@@ -58,4 +72,29 @@ class FavouriteViewController: UIViewController {
     }
     
 
+}
+
+extension FavouriteViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return vm.favourites.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = indexPath.row
+        let book = vm.favourites[row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fancyCell") as! FavouriteBookTableViewCell
+        cell.bookLabel.text = book.volumeInfo.title
+        
+        return cell
+    }
+    /*
+    func oldCell() {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseID",
+                                                 for: indexPath)
+        cell.textLabel?.text = book.volumeInfo.title
+    }
+     */
 }

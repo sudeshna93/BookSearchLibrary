@@ -31,6 +31,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bpp-ha-6kv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-1C-UZu" customClass="FanMenu" customModule="FanMenu">
                                 <rect key="frame" x="20" y="728" width="50" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,12 +48,17 @@
                         <constraints>
                             <constraint firstItem="qX0-Ib-K1a" firstAttribute="bottom" secondItem="l7J-1C-UZu" secondAttribute="bottom" constant="35" id="1Oh-4k-PtH"/>
                             <constraint firstItem="l7J-1C-UZu" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" constant="20" id="D9f-Xu-BTe"/>
+                            <constraint firstItem="bpp-ha-6kv" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" id="FUD-iW-L2q"/>
+                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="bottom" secondItem="bpp-ha-6kv" secondAttribute="bottom" id="hdF-Mp-Knk"/>
+                            <constraint firstItem="bpp-ha-6kv" firstAttribute="top" secondItem="qX0-Ib-K1a" secondAttribute="top" id="lrf-jz-jEu"/>
+                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="trailing" secondItem="bpp-ha-6kv" secondAttribute="trailing" id="q2k-lb-dSy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qX0-Ib-K1a"/>
                     </view>
                     <navigationItem key="navigationItem" id="ira-fq-IUP"/>
                     <connections>
                         <outlet property="fanMenuView" destination="l7J-1C-UZu" id="hyG-4D-UdK"/>
+                        <outlet property="tableView" destination="bpp-ha-6kv" id="OzE-kX-xxx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apN-bG-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="3250.7246376811595" y="-267.1875"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Books Tab Bar Controller-->
         <scene sceneID="HdR-Tv-S0B">
             <objects>
-                <tabBarController id="ySI-CL-mGG" sceneMemberID="viewController">
+                <tabBarController id="ySI-CL-mGG" customClass="BooksTabBarController" customModule="BookSearchLibrary" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g8Y-79-ZsJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
