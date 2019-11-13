@@ -12,14 +12,20 @@ class DecodableNetwork {
     
     //properties
     
-    var jsonDecoder = JSONDecoder()
+    let jsonDecoder: JSONDecoder
     var session : URLSession
     
     var currentTask: [URL:URLSessionDataTask] = [:]
     
     
+    init(_ session: URLSession, _ decoder: JSONDecoder) {
+        self.session = session
+        self.jsonDecoder = decoder
+    }
+    
     init(_ session: URLSession) {
         self.session = session
+        self.jsonDecoder = JSONDecoder()
     }
     
     //MARK: networking methods

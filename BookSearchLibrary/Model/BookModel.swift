@@ -41,10 +41,3 @@ struct ImageLinks: Decodable {
         case thumbnail = "thumbnail"
     }
 }
-
-extension BookModel: Equatable {
-    
-    static func ==(lhs: BookModel, rhs: BookModel) -> Bool {
-        return lhs.volumeInfo.title == rhs.volumeInfo.title
-    }
-}

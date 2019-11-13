@@ -28,7 +28,11 @@ class BookModelView: BookModelViewProtocol {
     //the filtered copy
     var books: [BookModel] = []
     var isSearching: Bool = false
-    let networker = DecodableNetwork()
+    let coreData = CoreDataManager()
+    lazy var networker: DecodableNetwork = {
+        return DecodableNetwork(URLSession(configuration: .default),
+                                self.coreData.mainContext)
+    }()
     lazy var pictureService: PictureService = {
         return PictureService(networker)
     }()
@@ -65,8 +69,9 @@ class BookModelView: BookModelViewProtocol {
             
             print(self.allBooks)
            // print(result!)
-            if result?.books != nil{
-                self.allBooks = result!.books
+            if result?.books != nil,
+                let books = result?.books.array as? [BookModel] {
+                self.allBooks = books
                 self.books = self.allBooks
             }
             completion(self.books)
