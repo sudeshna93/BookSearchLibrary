@@ -8,21 +8,22 @@
 
 import Foundation
 
-protocol  BookModelViewProtocol {
+
+protocol BookModelViewProtocol {
     var books: [BookModel] { get }
     var isSearching: Bool { get }
     func download(search: String, _ completion: @escaping ([BookModel])-> Void)
     func getPicture(_ url: URL, _ completion: @escaping (Data?)-> Void)
   //  func search(query: String) -> [BookModel]
     func cancelTask(_ oldURL: URL)
+    func favourite(at index: Int) -> Bool
 }
 
 class BookModelView: BookModelViewProtocol {
     
-//    static let shared = BookModelView()
-    init(){}
     //MARK:Properties
     private var allBooks: [BookModel] = []
+    var updateDelegate: BookUpdateDelegate?
     
     //the filtered copy
     var books: [BookModel] = []
@@ -31,6 +32,8 @@ class BookModelView: BookModelViewProtocol {
     lazy var pictureService: PictureService = {
         return PictureService(networker)
     }()
+    
+    init() { }
     
     //MARK: Methods
     func download(search: String, _ completion: @escaping ([BookModel]) -> Void) {
@@ -79,5 +82,8 @@ class BookModelView: BookModelViewProtocol {
         pictureService.get(url, completion)
     }
     
+    func favourite(at index: Int) -> Bool {
+        return updateDelegate?.didFavorite(books[index]) ?? false
+    }
     
 }
