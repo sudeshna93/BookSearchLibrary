@@ -7,6 +7,16 @@
 //
 
 import UIKit
+import FanMenu
+
+extension UIImage {
+    func resize(fit size: CGSize) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { (context) in
+            self.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}
 
 class BookSearchViewController: UIViewController {
 
@@ -73,7 +83,9 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
                     return
                 }
                 DispatchQueue.main.async {
-                    cell.thumbnailImage.image = UIImage(data: data)
+                    var image = UIImage(data: data)!
+                    image = image.resize(fit: cell.thumbnailImage.frame.size)
+                    cell.thumbnailImage.image = image
                 }
             }
         }
@@ -119,7 +131,7 @@ extension BookSearchViewController: UISearchBarDelegate{
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        
-        controller.download(search: " ") { _ in
+        controller.download(search: "") { _ in
             DispatchQueue.main.async {
                 self.collectionview.reloadData()
             }
@@ -139,4 +151,30 @@ extension BookSearchViewController: UISearchBarDelegate{
             }
         }
     }
+}
+
+extension BookSearchViewController: UICollectionViewDelegateFlowLayout {
+    
+    // the size of each item
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // <[]-[]-[]>
+        let cWidth = collectionView.frame.width
+        let width: CGFloat = (cWidth - 27.0) / 3.0
+        return CGSize(width: width, height: width)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .zero
+    }
+    
+    // margin between sections
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+
+    // margin between items
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4.0
+    }
+
 }

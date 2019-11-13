@@ -34,12 +34,27 @@ class BookModelView: BookModelViewProtocol {
     
     //MARK: Methods
     func download(search: String, _ completion: @escaping ([BookModel]) -> Void) {
+        /*
         if books.isEmpty == false{
             completion(books)
             return
         }
+        */
+        // if doing no search, clear books.
+        if search.isEmpty {
+            books = []
+            completion(books)
+            return
+        }
         
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(search)")!
+        // sanitize input
+        guard let searchTerm = search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            completion(books)
+            return
+        }
+        
+        let urlString = "https://www.googleapis.com/books/v1/volumes?q=\(searchTerm)"
+        let url = URL(string: urlString)!
         networker.get(type: BookModelResponse.self, url: url) { (result) in
             print("download finished")
            // self.allBooks = result!.books
