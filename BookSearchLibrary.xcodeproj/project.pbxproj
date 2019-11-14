@@ -20,7 +20,7 @@
 		02F5578B23764D2D006F8DC9 /* PictureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5578A23764D2D006F8DC9 /* PictureService.swift */; };
 		02F5578D2376599A006F8DC9 /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5578C2376599A006F8DC9 /* BookSearchViewController.swift */; };
 		02F5578F23765B38006F8DC9 /* BookSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5578E23765B38006F8DC9 /* BookSearchCollectionViewCell.swift */; };
-		02F5579123776AF3006F8DC9 /* BookModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5579023776AF3006F8DC9 /* BookModelView.swift */; };
+		02F5579123776AF3006F8DC9 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5579023776AF3006F8DC9 /* BookViewModel.swift */; };
 		3FC7E4C0237DE12200D261FE /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7E4BF237DE12200D261FE /* Throttle.swift */; };
 		790981221A924A77FF549F07 /* Pods_BookSearchLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4272491944F5467654E0CE70 /* Pods_BookSearchLibrary.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		02F5578A23764D2D006F8DC9 /* PictureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureService.swift; sourceTree = "<group>"; };
 		02F5578C2376599A006F8DC9 /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 		02F5578E23765B38006F8DC9 /* BookSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchCollectionViewCell.swift; sourceTree = "<group>"; };
-		02F5579023776AF3006F8DC9 /* BookModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModelView.swift; sourceTree = "<group>"; };
+		02F5579023776AF3006F8DC9 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		3FC7E4BF237DE12200D261FE /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		4272491944F5467654E0CE70 /* Pods_BookSearchLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSearchLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6308A5E2B247AFA4873E5893 /* Pods-BookSearchLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSearchLibrary.debug.xcconfig"; path = "Target Support Files/Pods-BookSearchLibrary/Pods-BookSearchLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		02F5578923764D06006F8DC9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				02F5579023776AF3006F8DC9 /* BookModelView.swift */,
+				02F5579023776AF3006F8DC9 /* BookViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 				02F5578D2376599A006F8DC9 /* BookSearchViewController.swift in Sources */,
 				028F6629237A2C0A00FFEF75 /* FavouriteViewController.swift in Sources */,
 				02F5578523763EDE006F8DC9 /* DecodaleNetwork.swift in Sources */,
-				02F5579123776AF3006F8DC9 /* BookModelView.swift in Sources */,
+				02F5579123776AF3006F8DC9 /* BookViewModel.swift in Sources */,
 				02F5578B23764D2D006F8DC9 /* PictureService.swift in Sources */,
 				02F5578F23765B38006F8DC9 /* BookSearchCollectionViewCell.swift in Sources */,
 				3FC7E4C0237DE12200D261FE /* Throttle.swift in Sources */,

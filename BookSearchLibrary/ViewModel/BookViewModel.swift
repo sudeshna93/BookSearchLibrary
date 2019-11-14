@@ -8,32 +8,56 @@
 
 import Foundation
 
-protocol BookModelViewProtocol {
+protocol BookViewModelProtocol {
     var books: [BookModel] { get }
     var isSearching: Bool { get }
-    func download(search: String, _ completion: @escaping ([BookModel])-> Void)
+    
+    func bind(_ update: @escaping ()->Void)
+    func bindAndFire(_ update: @escaping ()->Void)
+    func unbind()
+    
+    func download(search: String)
     func getPicture(_ url: URL, _ completion: @escaping (Data?)-> Void)
   //  func search(query: String) -> [BookModel]
     func cancelTask(_ oldURL: URL)
 }
 
-class BookModelView: BookModelViewProtocol {
+class BookViewModel: BookViewModelProtocol {
     
 //    static let shared = BookModelView()
     init(){}
+    
     //MARK:Properties
     private var allBooks: [BookModel] = []
+    private var update: (()->Void)?
     
     //the filtered copy
-    var books: [BookModel] = []
+    var books: [BookModel] = [] {
+        didSet {
+            update?()
+        }
+    }
     var isSearching: Bool = false
     let networker = DecodableNetwork()
     lazy var pictureService: PictureService = {
         return PictureService(networker)
     }()
     
+    func bind(_ update: @escaping ()->Void) {
+        self.update = update
+    }
+    
+    func bindAndFire(_ update: @escaping ()->Void) {
+        self.update = update
+        update()
+    }
+    
+    func unbind() {
+        update = nil
+    }
+    
     //MARK: Methods
-    func download(search: String, _ completion: @escaping ([BookModel]) -> Void) {
+    func download(search: String) {
         /*
         if books.isEmpty == false{
             completion(books)
@@ -43,13 +67,11 @@ class BookModelView: BookModelViewProtocol {
         // if doing no search, clear books.
         if search.isEmpty {
             books = []
-            completion(books)
             return
         }
         
         // sanitize input
         guard let searchTerm = search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-            completion(books)
             return
         }
         
@@ -58,12 +80,10 @@ class BookModelView: BookModelViewProtocol {
         networker.get(type: BookModelResponse.self, url: url) { (result) in
            // self.allBooks = result!.books
            // self.books = self.allBooks
-            
             if result?.books != nil{
                 self.allBooks = result!.books
                 self.books = self.allBooks
             }
-            completion(self.books)
             
         }
     }
