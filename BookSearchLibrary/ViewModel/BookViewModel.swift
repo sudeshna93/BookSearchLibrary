@@ -8,32 +8,61 @@
 
 import Foundation
 
-protocol  BookModelViewProtocol {
+protocol BookViewModelProtocol {
     var books: [BookModel] { get }
     var isSearching: Bool { get }
-    func download(search: String, _ completion: @escaping ([BookModel])-> Void)
+    
+    func bind(_ update: @escaping ()->Void)
+    func bindAndFire(_ update: @escaping ()->Void)
+    func unbind()
+    
+    func download(search: String)
     func getPicture(_ url: URL, _ completion: @escaping (Data?)-> Void)
   //  func search(query: String) -> [BookModel]
     func cancelTask(_ oldURL: URL)
+    func favourite(at index: Int) -> Bool
 }
 
-class BookModelView: BookModelViewProtocol {
+class BookViewModel: BookViewModelProtocol {
     
-//    static let shared = BookModelView()
-    init(){}
     //MARK:Properties
     private var allBooks: [BookModel] = []
+    var updateDelegate: BookUpdateDelegate?
     
     //the filtered copy
-    var books: [BookModel] = []
+    var books: [BookModel] = [] {
+        didSet {
+            update?()
+        }
+    }
+    var update: (()->Void)?
     var isSearching: Bool = false
-    let networker = DecodableNetwork()
+    let coreData = CoreDataManager()
+    lazy var networker: DecodableNetwork = {
+        return DecodableNetwork(URLSession(configuration: .default),
+                                self.coreData.mainContext)
+    }()
     lazy var pictureService: PictureService = {
         return PictureService(networker)
     }()
     
+    init() { }
+    
+    func bind(_ update: @escaping ()->Void) {
+        self.update = update
+    }
+    
+    func bindAndFire(_ update: @escaping ()->Void) {
+        self.update = update
+        update()
+    }
+    
+    func unbind() {
+        update = nil
+    }
+    
     //MARK: Methods
-    func download(search: String, _ completion: @escaping ([BookModel]) -> Void) {
+    func download(search: String) {
         /*
         if books.isEmpty == false{
             completion(books)
@@ -43,31 +72,22 @@ class BookModelView: BookModelViewProtocol {
         // if doing no search, clear books.
         if search.isEmpty {
             books = []
-            completion(books)
             return
         }
         
         // sanitize input
         guard let searchTerm = search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-            completion(books)
             return
         }
         
         let urlString = "https://www.googleapis.com/books/v1/volumes?q=\(searchTerm)"
         let url = URL(string: urlString)!
         networker.get(type: BookModelResponse.self, url: url) { (result) in
-            print("download finished")
-           // self.allBooks = result!.books
-           // self.books = self.allBooks
-            
-            print(self.allBooks)
-           // print(result!)
-            if result?.books != nil{
-                self.allBooks = result!.books
+            if result?.books != nil,
+                let books = result?.books.array as? [BookModel] {
+                self.allBooks = books
                 self.books = self.allBooks
             }
-            completion(self.books)
-            
         }
     }
     
@@ -79,5 +99,8 @@ class BookModelView: BookModelViewProtocol {
         pictureService.get(url, completion)
     }
     
+    func favourite(at index: Int) -> Bool {
+        return updateDelegate?.didFavorite(books[index]) ?? false
+    }
     
 }
