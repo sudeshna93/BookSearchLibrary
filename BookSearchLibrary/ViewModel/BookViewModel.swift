@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BookViewModelProtocol {
+protocol BookModelViewProtocol {
     var books: [BookModel] { get }
     var isSearching: Bool { get }
     
@@ -20,16 +20,14 @@ protocol BookViewModelProtocol {
     func getPicture(_ url: URL, _ completion: @escaping (Data?)-> Void)
   //  func search(query: String) -> [BookModel]
     func cancelTask(_ oldURL: URL)
+    func favourite(at index: Int) -> Bool
 }
 
 class BookViewModel: BookViewModelProtocol {
     
-//    static let shared = BookModelView()
-    init(){}
-    
     //MARK:Properties
     private var allBooks: [BookModel] = []
-    private var update: (()->Void)?
+    var updateDelegate: BookUpdateDelegate?
     
     //the filtered copy
     var books: [BookModel] = [] {
@@ -38,10 +36,16 @@ class BookViewModel: BookViewModelProtocol {
         }
     }
     var isSearching: Bool = false
-    let networker = DecodableNetwork()
+    let coreData = CoreDataManager()
+    lazy var networker: DecodableNetwork = {
+        return DecodableNetwork(URLSession(configuration: .default),
+                                self.coreData.mainContext)
+    }()
     lazy var pictureService: PictureService = {
         return PictureService(networker)
     }()
+    
+    init() { }
     
     func bind(_ update: @escaping ()->Void) {
         self.update = update
@@ -78,13 +82,11 @@ class BookViewModel: BookViewModelProtocol {
         let urlString = "https://www.googleapis.com/books/v1/volumes?q=\(searchTerm)"
         let url = URL(string: urlString)!
         networker.get(type: BookModelResponse.self, url: url) { (result) in
-           // self.allBooks = result!.books
-           // self.books = self.allBooks
-            if result?.books != nil{
-                self.allBooks = result!.books
+            if result?.books != nil,
+                let books = result?.books.array as? [BookModel] {
+                self.allBooks = books
                 self.books = self.allBooks
             }
-            
         }
     }
     
@@ -96,5 +98,8 @@ class BookViewModel: BookViewModelProtocol {
         pictureService.get(url, completion)
     }
     
+    func favourite(at index: Int) -> Bool {
+        return updateDelegate?.didFavorite(books[index]) ?? false
+    }
     
 }

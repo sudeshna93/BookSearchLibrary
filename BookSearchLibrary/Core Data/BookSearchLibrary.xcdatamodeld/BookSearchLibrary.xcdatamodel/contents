@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BookModel" representedClassName="BookModel" syncable="YES">
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookModelResponse" inverseName="books" inverseEntity="BookModelResponse"/>
+        <relationship name="volumeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VolumeInfo" inverseName="bookModel" inverseEntity="VolumeInfo"/>
+    </entity>
+    <entity name="BookModelResponse" representedClassName="BookModelResponse" syncable="YES">
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BookModel" inverseName="response" inverseEntity="BookModel"/>
+    </entity>
+    <entity name="ImageLinks" representedClassName="ImageLinks" syncable="YES">
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <relationship name="volumeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VolumeInfo" inverseName="imageLinks" inverseEntity="VolumeInfo"/>
+    </entity>
+    <entity name="VolumeInfo" representedClassName="VolumeInfo" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="bookModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookModel" inverseName="volumeInfo" inverseEntity="BookModel"/>
+        <relationship name="imageLinks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImageLinks" inverseName="volumeInfo" inverseEntity="ImageLinks"/>
+    </entity>
+    <elements>
+        <element name="BookModel" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="BookModelResponse" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="ImageLinks" positionX="-18" positionY="27" width="128" height="73"/>
+        <element name="VolumeInfo" positionX="-36" positionY="9" width="128" height="88"/>
+    </elements>
+</model>

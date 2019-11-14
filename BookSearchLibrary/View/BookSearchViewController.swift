@@ -23,6 +23,7 @@ class BookSearchViewController: UIViewController {
     @IBOutlet weak var collectionview: UICollectionView!
     
     @IBOutlet weak var bookSearchBar: UISearchBar!
+
     var vm: BookViewModelProtocol = BookViewModel()
     var arr: [String] = []
     private var previousRun = Date()
@@ -64,6 +65,7 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
         let row = indexPath.row
         setupImage(for: cell, at: row)
         setupName(for: cell, at: row)
+        cell.register(self, id: row)
         return cell
         
     }
@@ -202,4 +204,31 @@ extension BookSearchViewController: UICollectionViewDelegateFlowLayout {
         return 4.0
     }
 
+}
+
+extension BookSearchViewController: BookSearchCellTapDelegate {
+    func didDoubleTap(id: Int) {
+        if vm.favourite(at: id) {
+            showToast(text: "User did favourite a book!")
+        }
+        else {
+            showToast(text: "You already have this book favorited!")
+        }
+    }
+}
+
+extension BookSearchViewController {
+    func showToast(text: String) {
+        let alert = UIAlertController(title: text,
+                                      message: nil,
+                                      preferredStyle: .alert)
+        present(alert, animated: true) {
+            UIView.animate(withDuration: 1.0, animations: {
+                    alert.view.alpha = 0.0
+            }) { (finished) in
+                if finished { alert.dismiss(animated: true) }
+            }
+        }
+    }
+    
 }
