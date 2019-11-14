@@ -9,6 +9,24 @@
 import UIKit
 import FanMenu
 
+enum FavouriteMenuOptions: String {
+    case gmail = "mail_id"
+    case google = "google_id"
+}
+
+extension FavouriteMenuOptions {
+    var url: URL {
+        let s: String
+        switch self {
+            case .gmail:
+                s = "https://mail.google.com/mail/u/0/#"
+            case .google:
+                s = "https://www.google.com"
+        }
+        return URL(string: s)!
+    }
+}
+
 class FavouriteViewController: UIViewController {
 
     @IBOutlet weak var fanMenuView: FanMenu!
@@ -16,9 +34,7 @@ class FavouriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setButton()
-
     }
-    
 
     func setButton(){
         fanMenuView.button = FanMenuButton(
@@ -28,32 +44,35 @@ class FavouriteViewController: UIViewController {
         )
         
         fanMenuView.items = [
-        
-            FanMenuButton(id: "mail_id", image: UIImage(named: String("mailButton")), color: .red),
+            FanMenuButton(id: FavouriteMenuOptions.gmail.rawValue,
+                          image: UIImage(named: String("mailButton")),
+                          color: .red),
             
-            FanMenuButton(id: "google_id", image:  UIImage(named: String("googleButton")), color: .white)
-            
+            FanMenuButton(id: FavouriteMenuOptions.google.rawValue,
+                          image: UIImage(named: String("googleButton")),
+                          color: .white)
         ]
         
         fanMenuView.menuRadius = 90.0
-        
         fanMenuView.duration = 2.0
-        
         fanMenuView.delay = 0.05
-        
         fanMenuView.interval = (0, 2.0 * .pi)
         
        // fanMenuView.menuBackground = .gray
         
         fanMenuView.onItemDidClick = { FanMenuButton in
             print("itemDidClick: \(FanMenuButton.id)")
-            
+            if let option = FavouriteMenuOptions(rawValue: FanMenuButton.id) {
+                UIApplication.shared.open(option.url,
+                                          options: [:],
+                                          completionHandler: nil)
+            }
         }
         
         fanMenuView.onItemWillClick = {
             FanMenuButton in
-            //print("itemwillclick:\(FanMenuButton.id)")
-            self.fanMenuView.open()
+            print("itemwillclick:\(FanMenuButton.id)")
+            // self.fanMenuView.open()
         }
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ySI-CL-mGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ySI-CL-mGG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,18 +32,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-1C-UZu" customClass="FanMenu" customModule="FanMenu">
-                                <rect key="frame" x="20" y="728" width="50" height="50"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="613" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="8Jz-XC-1Qe"/>
-                                    <constraint firstAttribute="height" constant="50" id="Rn6-m0-C0h"/>
+                                    <constraint firstAttribute="height" constant="200" id="Alk-Xg-a5J"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="bottom" secondItem="l7J-1C-UZu" secondAttribute="bottom" constant="35" id="1Oh-4k-PtH"/>
-                            <constraint firstItem="l7J-1C-UZu" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" constant="20" id="D9f-Xu-BTe"/>
+                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="bottom" secondItem="l7J-1C-UZu" secondAttribute="bottom" id="2Ea-dP-qQw"/>
+                            <constraint firstItem="l7J-1C-UZu" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" id="RSO-QY-nmx"/>
+                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="trailing" secondItem="l7J-1C-UZu" secondAttribute="trailing" id="llk-RG-vnl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qX0-Ib-K1a"/>
                     </view>
