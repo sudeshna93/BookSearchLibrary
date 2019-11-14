@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol  BookModelViewProtocol {
+protocol BookModelViewProtocol {
     var books: [BookModel] { get }
     var isSearching: Bool { get }
     func download(search: String, _ completion: @escaping ([BookModel])-> Void)
@@ -56,12 +56,9 @@ class BookModelView: BookModelViewProtocol {
         let urlString = "https://www.googleapis.com/books/v1/volumes?q=\(searchTerm)"
         let url = URL(string: urlString)!
         networker.get(type: BookModelResponse.self, url: url) { (result) in
-            print("download finished")
            // self.allBooks = result!.books
            // self.books = self.allBooks
             
-            print(self.allBooks)
-           // print(result!)
             if result?.books != nil{
                 self.allBooks = result!.books
                 self.books = self.allBooks

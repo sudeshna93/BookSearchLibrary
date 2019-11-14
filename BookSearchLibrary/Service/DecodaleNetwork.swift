@@ -37,15 +37,7 @@ class DecodableNetwork {
         //keep task of new task
         currentTask[url] = task
         
-        //artificial delay
-        
-        let delay = Double.random(in: 0.5...2.0)
-        let dispatchTask : ()->Void = {
-            task.resume()
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay,
-        execute: dispatchTask)
+        task.resume()
     }
     
     func cancelTask(_ url: URL){

@@ -30,8 +30,8 @@ class BookSearchViewController: UIViewController {
     var controller : BookModelViewProtocol = BookModelView()
     var arr: [String] = []
     private var previousRun = Date()
-    private let minInterval = 0.05
-    
+    private let minInterval = 0.5 // half a second
+    private var throttle: Throttle?
     
     
     //MARK: View life-cycle
@@ -67,7 +67,7 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
         //cancel a previous enqueued task if any
         let book = controller.books[row]
         if let prevTaskIndex = cell.prevTag,
-            let urlString = book.volumeInfo.imageLinks.thumbnail {
+            let urlString = controller.books[prevTaskIndex].volumeInfo.imageLinks.thumbnail {
             if let oldURL = URL(string: urlString){
                 controller.cancelTask(oldURL)
             }
@@ -109,28 +109,55 @@ extension BookSearchViewController: UICollectionViewDelegate, UICollectionViewDa
 extension BookSearchViewController: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        
         guard let textToSearch = searchBar.text, !textToSearch.isEmpty else {
+            // cancel any enqueued task
+            if let t = throttle { t.cancel() }
             return
         }
 
-        if Date().timeIntervalSince(previousRun) > minInterval {
-            previousRun = Date()
-
-            controller.download(search: textToSearch) { _ in
+        // when user types,
+        // cancel any existing attempt to do searching
+        if let t = throttle {
+            t.cancel()
+            print("too fast")
+        }
+        
+        // start a new attempt
+        // this new attempt will be performed when
+        // the user does not type for the minInterval
+        throttle = Throttle(timeInterval: minInterval) { [weak self] in
+            guard let self = self else { return }
+            self.controller.download(search: textToSearch) { _ in
                 DispatchQueue.main.async {
                     self.collectionview.reloadData()
                 }
             }
         }
         
+        throttle?.start()
         
+        /*
+        if Date().timeIntervalSince(previousRun) > minInterval {
+            previousRun = Date()
+            controller.download(search: textToSearch) { _ in
+                DispatchQueue.main.async {
+                    self.collectionview.reloadData()
+                }
+            }
+        }
+        else {
+            print("Too fast")
+        }
+        */
     }
-    
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        
+        // cancel any enqueued request
+        if let t = throttle {
+            t.cancel()
+        }
+        
         controller.download(search: "") { _ in
             DispatchQueue.main.async {
                 self.collectionview.reloadData()
