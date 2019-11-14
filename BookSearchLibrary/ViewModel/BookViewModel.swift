@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BookModelViewProtocol {
+protocol BookViewModelProtocol {
     var books: [BookModel] { get }
     var isSearching: Bool { get }
     
@@ -35,6 +35,7 @@ class BookViewModel: BookViewModelProtocol {
             update?()
         }
     }
+    var update: (()->Void)?
     var isSearching: Bool = false
     let coreData = CoreDataManager()
     lazy var networker: DecodableNetwork = {

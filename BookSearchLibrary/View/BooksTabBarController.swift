@@ -21,7 +21,7 @@ class BooksTabBarController: UITabBarController {
             return
         }
         
-        let searchVM = BookModelView()
+        let searchVM = BookViewModel()
         let favVM = FavouritedBooksViewModel([])
         searchVM.updateDelegate = favVM
         
