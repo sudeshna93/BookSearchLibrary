@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ySI-CL-mGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ySI-CL-mGG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,26 +31,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bpp-ha-6kv">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bpp-ha-6kv">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-1C-UZu" customClass="FanMenu" customModule="FanMenu">
                                 <rect key="frame" x="0.0" y="613" width="414" height="200"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Alk-Xg-a5J"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favourite Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-XM-3H4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="qX0-Ib-K1a" firstAttribute="bottom" secondItem="l7J-1C-UZu" secondAttribute="bottom" id="2Ea-dP-qQw"/>
-                            <constraint firstItem="l7J-1C-UZu" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" id="RSO-QY-nmx"/>
-                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="trailing" secondItem="l7J-1C-UZu" secondAttribute="trailing" id="llk-RG-vnl"/>
                             <constraint firstItem="bpp-ha-6kv" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" id="FUD-iW-L2q"/>
+                            <constraint firstItem="l7J-1C-UZu" firstAttribute="leading" secondItem="qX0-Ib-K1a" secondAttribute="leading" id="RSO-QY-nmx"/>
                             <constraint firstItem="qX0-Ib-K1a" firstAttribute="bottom" secondItem="bpp-ha-6kv" secondAttribute="bottom" id="hdF-Mp-Knk"/>
-                            <constraint firstItem="bpp-ha-6kv" firstAttribute="top" secondItem="qX0-Ib-K1a" secondAttribute="top" id="lrf-jz-jEu"/>
+                            <constraint firstItem="qX0-Ib-K1a" firstAttribute="trailing" secondItem="l7J-1C-UZu" secondAttribute="trailing" id="llk-RG-vnl"/>
+                            <constraint firstItem="bpp-ha-6kv" firstAttribute="top" secondItem="qX0-Ib-K1a" secondAttribute="top" constant="30" id="lrf-jz-jEu"/>
                             <constraint firstItem="qX0-Ib-K1a" firstAttribute="trailing" secondItem="bpp-ha-6kv" secondAttribute="trailing" id="q2k-lb-dSy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qX0-Ib-K1a"/>
