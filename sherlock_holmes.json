@@ -1,0 +1,823 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 2062,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "aJ6x0U4kndgC",
+   "etag": "nXnupjUmK/I",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/aJ6x0U4kndgC",
+   "volumeInfo": {
+    "title": "The Penguin Complete Sherlock Holmes",
+    "authors": [
+     "Arthur Conan Doyle"
+    ],
+    "publisher": "Penguin UK",
+    "publishedDate": "2009-11-05",
+    "description": "Sherlock Holmes is not only the most famous character in crime fiction, but arguably the most famous character in all fiction. In sixty adventures that pit his extraordinary wits and courage against foreign spies, blackmailers, cultists, petty thieves, murderers, swindlers, policemen (both stupid and clever), and his arch-nemesis Moriarty, Sherlock Holmes, together with his faithful sidekick Doctor John H. Watson, proves himself to be not only the quintessential detective but also the most engaging and entertaining company any reader could ask for. This beautiful new edition contains a new foreword by Ruth Rendell",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780141931814"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0141931817"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 1136,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.14.10.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=aJ6x0U4kndgC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=aJ6x0U4kndgC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=aJ6x0U4kndgC&dq=Sherlock+Holmes&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=aJ6x0U4kndgC&dq=Sherlock+Holmes&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Penguin_Complete_Sherlock_Holmes.html?hl=&id=aJ6x0U4kndgC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true
+    },
+    "pdf": {
+     "isAvailable": true
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=aJ6x0U4kndgC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "This beautiful new edition contains a new foreword by Ruth Rendell"
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "haFFCgAAQBAJ",
+   "etag": "oQIJq00ilv0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/haFFCgAAQBAJ",
+   "volumeInfo": {
+    "title": "The Sherlock Holmes Book",
+    "authors": [
+     "DK Publishing"
+    ],
+    "publisher": "Penguin",
+    "publishedDate": "2015-10-20",
+    "description": "The Sherlock Holmes Book, the latest in DK's award-winning Big Ideas Simply Explained series, tackles the most \"elementary\" of subjects--the world of Sherlock Holmes, as told by Sir Arthur Conan Doyle. The Sherlock Holmes Book is packed with witty illustrations, clear graphics, and memorable quotes that make it the perfect Sherlock Holmes guide, covering every case of the world's greatest detective, from A Study in Scarlet to The Adventure of Shoscombe Old Place, placing the sorties in a wider context. Stories include at-a-glance flowcharts that show how Holmes reaches his conclusions through deductive reasoning, and character guides provide handy reference for readers and an invaluable resource for fans of the Sherlock Holmes films and TV series. The Sherlock Holmes Book holds a magnifying glass to the world of Sir Arthur Conan Doyle's legendary detective.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781465449979"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1465449973"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 352,
+    "printType": "BOOK",
+    "categories": [
+     "Literary Criticism"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.2.2.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=haFFCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=haFFCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=haFFCgAAQBAJ&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=2&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=haFFCgAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=haFFCgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 9.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=haFFCgAAQBAJ&rdid=book-haFFCgAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 9990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Sherlock_Holmes_Book-sample-epub.acsm?id=haFFCgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Sherlock_Holmes_Book-sample-pdf.acsm?id=haFFCgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=haFFCgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The Sherlock Holmes Book, the latest in DK&#39;s award-winning Big Ideas Simply Explained series, tackles the most &quot;elementary&quot; of subjects--the world of Sherlock Holmes, as told by Sir Arthur Conan Doyle."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "buc0AAAAMAAJ",
+   "etag": "dCNVwVLuuhU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/buc0AAAAMAAJ",
+   "volumeInfo": {
+    "title": "Adventures of Sherlock Holmes",
+    "authors": [
+     "Sir Arthur Conan Doyle"
+    ],
+    "publishedDate": "1892",
+    "description": "Presenting 12 tales starring the legendary British detective Sherlock Holmes, this 1892 book is Arthur Conan Doyle's first short-story collection. The mystery compilation includes some of Holmes's finest cases with his dutiful sidekick, Doctor Watson, most notably \"A Scandal in Bohemia,\" in which Holmes matches wits with the crafty former lover of a European king. Also featured is \"The Adventure of the Red-Headed League,\" a study in misdirection that unfolds to become a much larger scheme. The stories, initially published in the Strand Magazine, are essential reading for Holmes fans.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UOM:39015049217741"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 307,
+    "printType": "BOOK",
+    "averageRating": 4.5,
+    "ratingsCount": 487,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "4.3.11.0.full.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=buc0AAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=buc0AAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=buc0AAAAMAAJ&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=3&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=buc0AAAAMAAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=buc0AAAAMAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FREE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=buc0AAAAMAAJ&rdid=book-buc0AAAAMAAJ&rdot=1&source=gbs_api"
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": true,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.com/books/download/Adventures_of_Sherlock_Holmes.epub?id=buc0AAAAMAAJ&hl=&output=epub&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.com/books/download/Adventures_of_Sherlock_Holmes.pdf?id=buc0AAAAMAAJ&hl=&output=pdf&sig=ACfU3U3UFzY0zsHRr3M-FLDDrmM0rrWf4Q&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=buc0AAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Presenting 12 tales starring the legendary British detective Sherlock Holmes, this 1892 book is Arthur Conan Doyle&#39;s first short-story collection."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "RxAJAAAAIAAJ",
+   "etag": "UpSGnfqgFM0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RxAJAAAAIAAJ",
+   "volumeInfo": {
+    "title": "Adventures of Sherlock Holmes",
+    "authors": [
+     "Sir Arthur Conan Doyle"
+    ],
+    "publishedDate": "1900",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:24503524111"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 307,
+    "printType": "BOOK",
+    "averageRating": 4.0,
+    "ratingsCount": 32,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.2.6.0.full.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=RxAJAAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=RxAJAAAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=RxAJAAAAIAAJ&pg=PP1&dq=Sherlock+Holmes&hl=&cd=4&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=RxAJAAAAIAAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=RxAJAAAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FREE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=RxAJAAAAIAAJ&rdid=book-RxAJAAAAIAAJ&rdot=1&source=gbs_api"
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": true,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.com/books/download/Adventures_of_Sherlock_Holmes.epub?id=RxAJAAAAIAAJ&hl=&output=epub&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.com/books/download/Adventures_of_Sherlock_Holmes.pdf?id=RxAJAAAAIAAJ&hl=&output=pdf&sig=ACfU3U18ptZO2jaKLeRZWFQBCz9qz80jQA&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=RxAJAAAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "nKdJDwAAQBAJ",
+   "etag": "g+2DSnh/9Z4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/nKdJDwAAQBAJ",
+   "volumeInfo": {
+    "title": "The Case Book Of Sherlock Holmes - Om Illustrated Classics",
+    "authors": [
+     "ARTHUR CONAN DOYLE"
+    ],
+    "publisher": "Om Books International",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9789386410016"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "938641001X"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 237,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=nKdJDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=nKdJDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=nKdJDwAAQBAJ&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=5&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=nKdJDwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=nKdJDwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 1.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 1.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=nKdJDwAAQBAJ&rdid=book-nKdJDwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Case_Book_Of_Sherlock_Holmes_Om_Illu-sample-epub.acsm?id=nKdJDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Case_Book_Of_Sherlock_Holmes_Om_Illu-sample-pdf.acsm?id=nKdJDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=nKdJDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "iVS_VwbmXDUC",
+   "etag": "TZc2aN9g01s",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/iVS_VwbmXDUC",
+   "volumeInfo": {
+    "title": "Sherlock Holmes: The Complete Novels and Stories",
+    "authors": [
+     "Sir Arthur Conan Doyle"
+    ],
+    "publisher": "Bantam Classics",
+    "publishedDate": "2013-06-26",
+    "description": "Sherlock Holmes The Complete Novels and Stories Volume I Since his first appearance in Beeton’s Christmas Annual in 1887, Sir Arthur Conan Doyle’s Sherlock Holmes has been one of the most beloved fictional characters ever created. Now, in two paperback volumes, Bantam presents all fifty-six short stories and four novels featuring Conan Doyle’s classic hero--a truly complete collection of Sherlock Holmes’s adventures in crime! Volume I includes the early novel A Study in Scarlet, which introduced the eccentric genius of Sherlock Holmes to the world. This baffling murder mystery, with the cryptic word Rache written in blood, first brought Holmes together with Dr. John Watson. Next, The Sign of Four presents Holmes’s famous “seven percent solution” and the strange puzzle of Mary Morstan in the quintessential locked-room mystery. Also included are Holmes’s feats of extraordinary detection in such famous cases as the chilling “ The Adventure of the Speckled Band,” the baffling riddle of “The Musgrave Ritual,” and the ingeniously plotted “The Five Orange Pips,” tales that bring to life a Victorian England of horse-drawn cabs, fogs, and the famous lodgings at 221B Baker Street, where Sherlock Holmes earned his undisputed reputation as the greatest fictional detective of all time.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780307834409"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0307834409"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 1088,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 15,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.4.4.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=iVS_VwbmXDUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=iVS_VwbmXDUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=iVS_VwbmXDUC&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=6&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=iVS_VwbmXDUC&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=iVS_VwbmXDUC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 4.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 4.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=iVS_VwbmXDUC&rdid=book-iVS_VwbmXDUC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 4990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 4990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Sherlock_Holmes_The_Complete_Novels_and-sample-epub.acsm?id=iVS_VwbmXDUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=iVS_VwbmXDUC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Sherlock Holmes The Complete Novels and Stories Volume I Since his first appearance in Beeton’s Christmas Annual in 1887, Sir Arthur Conan Doyle’s Sherlock Holmes has been one of the most beloved fictional characters ever created."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "UomtUqgaJlkC",
+   "etag": "UM8dZvWoPYY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/UomtUqgaJlkC",
+   "volumeInfo": {
+    "title": "The Best of Sherlock Holmes",
+    "authors": [
+     "Arthur Conan Doyle",
+     "David Stuart Davies"
+    ],
+    "publisher": "Collector's Library",
+    "publishedDate": "2009",
+    "description": ".0000000000These fifteen short stories, chosen by David Stuart Davies, former Editor of Sherlock magazine, show the master detective Sherlock Holmes at his most ingenious. Faithfully supported by his chronicler, Dr Watson, Holmes pits his wits against 'the Napoleon of Crime', Professor Moriarty, assists European royalty threatened by disgrace, helps to solve the mysterious death of a young woman due to be married, and becomes involved with other intrigues that defeat the detectives of Scotland Yard. The original illustrations from The Strand magazine by Sidney Paget accompany each story.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1905716559"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781905716555"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 544,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.0.0.preview.1",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=UomtUqgaJlkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=UomtUqgaJlkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=UomtUqgaJlkC&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=7&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=UomtUqgaJlkC&dq=Sherlock+Holmes&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Best_of_Sherlock_Holmes.html?hl=&id=UomtUqgaJlkC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=UomtUqgaJlkC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "0000000000These fifteen short stories, chosen by David Stuart Davies, former Editor of Sherlock magazine, show the master detective Sherlock Holmes at his most ingenious."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "xgnTteuZ694C",
+   "etag": "TQtai2jhKCI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/xgnTteuZ694C",
+   "volumeInfo": {
+    "title": "The Return of Sherlock Holmes",
+    "subtitle": "detective stories",
+    "authors": [
+     "Arthur Conan Doyle"
+    ],
+    "publisher": "W. R. Caldwell & Company",
+    "publishedDate": "1905",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:36105044959224"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 381,
+    "printType": "BOOK",
+    "categories": [
+     "Detective and mystery stories, English"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 381,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.0.3.0.full.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=xgnTteuZ694C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=xgnTteuZ694C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=xgnTteuZ694C&pg=PP1&dq=Sherlock+Holmes&hl=&cd=8&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=xgnTteuZ694C&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=xgnTteuZ694C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FREE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=xgnTteuZ694C&rdid=book-xgnTteuZ694C&rdot=1&source=gbs_api"
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": true,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.com/books/download/The_Return_of_Sherlock_Holmes.epub?id=xgnTteuZ694C&hl=&output=epub&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.com/books/download/The_Return_of_Sherlock_Holmes.pdf?id=xgnTteuZ694C&hl=&output=pdf&sig=ACfU3U2vhH03cpwVOcVYR0_FP7ko4T4twA&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=xgnTteuZ694C&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "uql4DQAAQBAJ",
+   "etag": "xEtzS3zPcW4",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/uql4DQAAQBAJ",
+   "volumeInfo": {
+    "title": "The Theatrical Sherlock Holmes",
+    "authors": [
+     "Sir Arthur Conan Doyle",
+     "William Gillette"
+    ],
+    "publisher": "Lulu Press, Inc",
+    "publishedDate": "2014-02-02",
+    "description": "EPUB Version - Sherlock Holmes takes to the stage in four entertaining play scripts written between 1899 and 1921 by Sir Arthur Conan Doyle and William Gillette. Even though Sherlock Holmes had fallen to his supposed death at the culmination of 'The Final Problem' in December 1893, it proved very difficult to keep the great detective down as this collection of theatrical play scripts proves. Presented are: SHERLOCK HOLMES - A DRAMA IN FOUR ACTS (1899, by William Gillette and Sir Arthur Conan Doyle); THE PAINFUL PREDICAMENT OF SHERLOCK HOLMES (1905, attributed to William Gillette); THE SPECKLED BAND - AN ADVENTURE OF MISTER SHERLOCK HOLMES (1910, by Sir Arthur Conan Doyle) and THE CROWN DIAMOND - AN EVENING WITH SHERLOCK HOLMES (1921, by Sir Arthur Conan Doyle). This collection also contains an introduction written by Paul Stuart Hayes, the author of REQUIEM FOR SHERLOCK HOLMES, which sets the scene for Sherlock Holmes’ stage debut and focuses on each of the four productions presented in this volume.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781291731828"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1291731822"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.2.2.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=uql4DQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=uql4DQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=uql4DQAAQBAJ&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=9&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=uql4DQAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=uql4DQAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 0.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 0.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=uql4DQAAQBAJ&rdid=book-uql4DQAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 990000.0,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 990000.0,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Theatrical_Sherlock_Holmes-sample-epub.acsm?id=uql4DQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Theatrical_Sherlock_Holmes-sample-pdf.acsm?id=uql4DQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=uql4DQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "This collection also contains an introduction written by Paul Stuart Hayes, the author of REQUIEM FOR SHERLOCK HOLMES, which sets the scene for Sherlock Holmes’ stage debut and focuses on each of the four productions presented in this ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Fq1uKmT02aMC",
+   "etag": "1AYIKEZrFKA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Fq1uKmT02aMC",
+   "volumeInfo": {
+    "title": "Sherlock Holmes",
+    "subtitle": "The Complete Stories",
+    "authors": [
+     "Arthur Conan Doyle"
+    ],
+    "publisher": "Wordsworth Editions",
+    "publishedDate": "1996-04-29",
+    "description": "It is more than a century since the ascetic, gaunt and enigmatic detective, Sherlock Holmes, made his first appearance in A Study in Scarlet. From 1891, beginning with The Adventures of Sherlock Holmes, the now legendary and pioneering Strand Magazine began serialising Arthur Conan Doyle's matchless tales of detection, featuring the incomparable sleuth patiently assisted by his doggedly loyal and lovably pedantic friend and companion, Dr Watson. The stories are illustrated by the remarkable Sydney Paget from whom our images of Sherlock Holmes and his world derive and who first equipped Holmes with his famous deerstalker hat. The literary cult of Sherlock Holmes shows no sign of fading with time as each new generation comes to love and revere the penetrating mind and ruthless logic which were the undoing of so many Victorian master criminals.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1853268968"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781853268960"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 1408,
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 6,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.2.0.preview.1",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Fq1uKmT02aMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Fq1uKmT02aMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=Fq1uKmT02aMC&printsec=frontcover&dq=Sherlock+Holmes&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=Fq1uKmT02aMC&dq=Sherlock+Holmes&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Sherlock_Holmes.html?hl=&id=Fq1uKmT02aMC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=Fq1uKmT02aMC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "The stories are illustrated by the remarkable Sydney Paget from whom our images of Sherlock Holmes and his world derive and who first equipped Holmes with his famous deerstalker hat."
+   }
+  }
+ ]
+}

@@ -24,7 +24,7 @@ class BookSearchViewController: UIViewController {
     
     @IBOutlet weak var bookSearchBar: UISearchBar!
 
-    var vm: BookViewModelProtocol = BookViewModel()
+    var vm: BookViewModelProtocol!
     var arr: [String] = []
     private var previousRun = Date()
     private let minInterval = 0.5 // half a second

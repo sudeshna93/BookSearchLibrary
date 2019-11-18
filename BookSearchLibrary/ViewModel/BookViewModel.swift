@@ -37,16 +37,16 @@ class BookViewModel: BookViewModelProtocol {
     }
     var update: (()->Void)?
     var isSearching: Bool = false
-    let coreData = CoreDataManager()
-    lazy var networker: DecodableNetwork = {
-        return DecodableNetwork(URLSession(configuration: .default),
-                                self.coreData.mainContext)
-    }()
+    let coreData: CoreDataManager
+    let networker: NetworkServiceProtocol
     lazy var pictureService: PictureService = {
         return PictureService(networker)
     }()
     
-    init() { }
+    init(_ networker: NetworkServiceProtocol, coreData: CoreDataManager) {
+        self.networker = networker
+        self.coreData = coreData
+    }
     
     func bind(_ update: @escaping ()->Void) {
         self.update = update

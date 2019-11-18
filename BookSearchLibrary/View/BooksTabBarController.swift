@@ -20,8 +20,10 @@ class BooksTabBarController: UITabBarController {
         guard let vcs = viewControllers else {
             return
         }
-        
-        let searchVM = BookViewModel()
+        let coreData = CoreDataManager()
+        let networker = DecodableNetwork(URLSession(configuration: .default),
+                                         coreData.mainContext)
+        let searchVM = BookViewModel(networker, coreData: coreData)
         let favVM = FavouritedBooksViewModel([])
         searchVM.updateDelegate = favVM
         

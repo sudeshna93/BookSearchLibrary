@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DecodableNetwork {
+class DecodableNetwork: NetworkServiceProtocol {
     
     //properties
     

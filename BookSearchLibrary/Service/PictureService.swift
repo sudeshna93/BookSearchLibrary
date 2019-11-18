@@ -12,10 +12,10 @@ class PictureService {
     
     //MARK: Properties
     let cache : NSCache<NSURL, NSData>
-    let decodableNetwork: DecodableNetwork
+    let decodableNetwork: NetworkServiceProtocol
     
     //MARK: Initializer
-    init(_ networker: DecodableNetwork) {
+    init(_ networker: NetworkServiceProtocol) {
         cache = NSCache()
         self.decodableNetwork = networker
     }
